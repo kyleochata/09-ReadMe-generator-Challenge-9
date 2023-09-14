@@ -42,7 +42,7 @@ const questions = [
   type: 'input',
   message: 'What sequence would you like to initialize the test? Default: npm test',
   name: 'testInput',
-  default: 'npm test',
+  default: 'Use "npm test" in your terminal to run tests on this code.',
 },
 {
   type: 'list',

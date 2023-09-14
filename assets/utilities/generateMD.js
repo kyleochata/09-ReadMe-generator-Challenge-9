@@ -57,6 +57,8 @@ ${data.descriptionInput}
 * [License](#license)
 * [Contributing](#contributing)
 * [Test](#test)
+* [Questions](#questions)
+* [Credit](#credit)
 
 ## Installation
 ${data.installInput}
@@ -75,7 +77,9 @@ ${data.testInput}
 
 ## Questions
 If you have further questions about this project, please send an email or checkout us out on GitHub.
+
 Email: ${data.email}
+
 GitHub Link: https://github.com/${data.githubUsername}
 
 ## Credit
