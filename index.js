@@ -1,20 +1,3 @@
-/*
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-*/
 
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
@@ -41,7 +24,7 @@ const questions = [
   type: 'input',
   message: 'How would you install this project?',
   name: 'installInput',
-  default: `Locate a suitable place where you would like to download this repository. Once found, copy the repositories SSH or HTTPS to clone through the terminal or download the zipfile from GitHub. After it is downloaded, right-click the index file and launch with your preferred internet browser. While in the browser, feel free to examine the HTML and CSS code in developer mode by hitting F12 or right-clicking the screen and navigating to inspect.`
+  default: `Locate a suitable place where you would like to download this repository. Once found, copy the repositories SSH or HTTPS to clone through the terminal or download the zipfile from GitHub. After it is downloaded, please ensure that node.js is installed. Once it is installed and at least version 18 or higher, go to your terminal, navigate to the directory that contains this repository. Once there, type in "node index" to create your README.md file`
 },
 {
   type: 'input',
@@ -53,6 +36,7 @@ const questions = [
   type: 'input',
   message: 'Please enter in anyone you wish to give credit to.',
   name: 'creditInput',
+  default: `N/A`,
 },
 {
   type: 'input',
@@ -65,10 +49,10 @@ const questions = [
   message: 'What type of license would you like to use? Default: MIT License',
   choices: [
     'MIT', new inquirer.Separator(),
-    'Apache 2.0', new inquirer.Separator(),
-    'BSD 3-Clause', new inquirer.Separator(),
-    'BSD 2-Clause', new inquirer.Separator(),
-    'GNU GPL v3', new inquirer.Separator(),
+    'Apache_2.0', new inquirer.Separator(),
+    'BSD_3_Clause', new inquirer.Separator(),
+    'BSD_2_Clause', new inquirer.Separator(),
+    'GNU_GPL_v3', new inquirer.Separator(),
   ],
   name: 'licenseType',
   default: 'MIT License',
